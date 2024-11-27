@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank Login - Educational Demo</title>
+    <meta name="description" content="This is an educational demonstration of a phishing page. DO NOT enter real credentials.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .warning-banner {
+            background-color: #ff4444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            font-weight: bold;
+        }
+
+        .login-container {
+            margin-top: 60px;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .login-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .login-form h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 30px;
+        }
+
+        .bank-logo {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #003366;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #002244;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .demo-notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-banner">
+        EDUCATIONAL DEMONSTRATION ONLY - DO NOT ENTER REAL CREDENTIALS
+    </div>
+
+    <div class="login-container">
+        <div class="login-form">
+            <div class="bank-logo">
+                SecureBank
+            </div>
+            <h2>Account Login</h2>
+            <form action="process.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <div class="demo-notice">
+                This is an educational demonstration of a phishing page.<br>
+                Created for cybersecurity education purposes only.
+            </div>
+        </div>
+        <div class="footer">
+            © 2024 SecureBank Demo - Educational Purposes Only
+        </div>
+    </div>
+</body>
+</html>
